@@ -1,0 +1,32 @@
+{
+  "name": "@dpack/js",
+  "version": "0.1.1",
+  "description": "dPack Javascript Library",
+  "contributors": [
+    "Jared Rice Sr. <jared@dwebs.io>",
+    "Distributed Webs Project, LLC. <labs@distributedwebs.org>"
+  ],
+  "license": "BSD-2-Clause",
+  "main": "index.js",
+  "scripts": {
+    "test-local": "zuul --local -- tests/index.js",
+    "build": "browserify -s DPack -e ./ | uglifyjs -c warnings=false -m > dpack.min.js"
+  },
+  "dependencies": {
+    "@ddrive/core": "ddrives/core#master",
+    "@dwcore/channel": "dwcore/channel#master",
+    "@dwebs/tower": "distributedweb/tower#master",
+    "@flockcore/wrtc": "flockcore/wrtc#master",
+    "memdb": "^1.3.1",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "tape": "^4.6.3",
+    "uglifyjs": "^2.4.10",
+    "zuul": "^3.11.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
